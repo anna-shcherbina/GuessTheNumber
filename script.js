@@ -10,6 +10,7 @@ function guessTheNumber(hiddenNumber) {
         let userNumber = prompt("Угадай число от 1 до 100");
 
         if (isNumber(userNumber)) {
+            userNumber = +userNumber;
 
             if (userNumber > hiddenNumber) {
                 alert("Загаданное число меньше");
@@ -17,10 +18,10 @@ function guessTheNumber(hiddenNumber) {
             } else if (userNumber < hiddenNumber) {
                 alert("Загаданное число больше");
                 compareTheNumber();
-            } else if (userNumber == hiddenNumber) {
+            } else if (userNumber === hiddenNumber) {
                 alert("Поздравляю, Вы угадали!!!");
             };
-            userNumber = +userNumber;
+
 
         } else if (userNumber === null) {
             alert("Игра окончена");
